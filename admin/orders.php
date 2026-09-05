@@ -181,14 +181,24 @@ if (
         true
     )
 ) {
+    // Display the specifically selected status
     $sql .= " AND orders.order_status = ?";
 
     $parameters[] = $selectedStatus;
     $parameterTypes .= "s";
+
+} else {
+    // Default active queue excludes finished orders
+    $sql .= "
+        AND orders.order_status NOT IN (
+            'Completed',
+            'Cancelled'
+        )
+    ";
 }
 
 
-$sql .= " ORDER BY orders.order_id DESC";
+$sql .= " ORDER BY orders.order_id ASC";
 
 
 $orderStmt = $conn->prepare($sql);
@@ -311,7 +321,7 @@ $orderItemStmt = $conn->prepare("
                     name="status">
 
                 <option value="">
-                    All Statuses
+                    Active Orders
                 </option>
 
                 <?php foreach (
@@ -368,6 +378,8 @@ $orderItemStmt = $conn->prepare("
     <?php if ($orderResult->num_rows > 0): ?>
 
         <div class="admin-order-list">
+		
+			<?php $orderPosition = 1; ?>
 
             <?php while (
 					$order = $orderResult->fetch_assoc()
@@ -390,6 +402,10 @@ $orderItemStmt = $conn->prepare("
 					<article class="admin-order-card">
 
                     <div class="admin-order-card-heading">
+					
+						<div class="admin-order-sequence">
+							Order <?php echo $orderPosition; ?>
+						</div>
 
                         <div>
                             <p class="admin-order-number">
@@ -581,6 +597,8 @@ $orderItemStmt = $conn->prepare("
 											</strong>
 
 										</div>
+										
+										<?php $orderPosition++; ?>
 
 									<?php endwhile; ?>
 
