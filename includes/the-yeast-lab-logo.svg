@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1120" height="340" viewBox="0 0 1120 340" role="img" aria-labelledby="title description">
+  <title id="title">The Yeast Lab logo</title>
+  <desc id="description">A red laboratory beaker topped by a golden bread loaf beside The Yeast Lab wordmark.</desc>
+  <rect width="1120" height="340" rx="24" fill="#FFF9ED"/>
+  <g transform="translate(55 35)">
+    <path d="M44 94C44 48 80 22 131 22C182 22 218 48 218 94V108H44V94Z" fill="#D9AA62" stroke="#1E1E1C" stroke-width="8"/>
+    <path d="M83 50C73 62 68 74 67 87M127 40C117 55 112 70 112 88M171 50C161 62 156 74 155 87" fill="none" stroke="#FFF9ED" stroke-width="8" stroke-linecap="round"/>
+    <path d="M91 108V143L42 229C30 250 45 273 69 273H193C217 273 232 250 220 229L171 143V108" fill="#FFF9ED" stroke="#1E1E1C" stroke-width="8" stroke-linejoin="round"/>
+    <path d="M66 219L93 171H169L196 219C203 232 194 247 179 247H83C68 247 59 232 66 219Z" fill="#B52A2A"/>
+    <circle cx="104" cy="211" r="9" fill="#FFF9ED"/><circle cx="143" cy="194" r="7" fill="#FFF9ED"/><circle cx="165" cy="225" r="5" fill="#FFF9ED"/>
+  </g>
+  <g fill="#1E1E1C">
+    <text x="330" y="125" font-family="Arial, Helvetica, sans-serif" font-size="25" font-weight="700" letter-spacing="8">THE</text>
+    <text x="324" y="221" font-family="Georgia, 'Times New Roman', serif" font-size="92" font-weight="700">Yeast Lab</text>
+    <path d="M330 249H1010" stroke="#B52A2A" stroke-width="5"/>
+    <text x="332" y="288" font-family="Arial, Helvetica, sans-serif" font-size="18" font-weight="700" letter-spacing="5">ARTISAN BAKERY · MADE FRESH DAILY</text>
+  </g>
+</svg>
