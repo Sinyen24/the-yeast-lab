@@ -132,7 +132,8 @@ $sql = "
         orders.order_status,
         orders.payment_method,
         orders.payment_status,
-        orders.created_at,
+		orders.order_notes,
+		orders.created_at,
 
         (
             SELECT COALESCE(
@@ -201,6 +202,18 @@ if (!empty($parameters)) {
 
 $orderStmt->execute();
 $orderResult = $orderStmt->get_result();
+
+// Prepare the query used to retrieve products in each order
+$orderItemStmt = $conn->prepare("
+    SELECT
+        product_name,
+        product_price,
+        quantity,
+        line_total
+    FROM order_items
+    WHERE order_id = ?
+    ORDER BY order_item_id ASC
+");
 
 ?>
 
@@ -357,10 +370,24 @@ $orderResult = $orderStmt->get_result();
         <div class="admin-order-list">
 
             <?php while (
-                $order = $orderResult->fetch_assoc()
-            ): ?>
+					$order = $orderResult->fetch_assoc()
+				): ?>
 
-                <article class="admin-order-card">
+					<?php
+						$currentOrderId = (int) $order["order_id"];
+
+						$orderItemStmt->bind_param(
+							"i",
+							$currentOrderId
+						);
+
+						$orderItemStmt->execute();
+
+						$orderItemResult =
+							$orderItemStmt->get_result();
+					?>
+
+					<article class="admin-order-card">
 
                     <div class="admin-order-card-heading">
 
@@ -488,7 +515,86 @@ $orderResult = $orderStmt->get_result();
                         </div>
 
                     </div>
+					
+					<div class="admin-order-remark">
 
+								<span>Customer Remark</span>
+
+								<?php if (
+									trim((string) $order["order_notes"]) !== ""
+								): ?>
+
+									<p>
+										<?php echo nl2br(
+											htmlspecialchars($order["order_notes"])
+										); ?>
+									</p>
+
+								<?php else: ?>
+
+									<p class="no-customer-remark">
+										No special remark was provided.
+									</p>
+
+								<?php endif; ?>
+
+							</div>
+
+					<div class="admin-ordered-products">
+
+							<h3>Ordered Products</h3>
+
+							<?php if ($orderItemResult->num_rows > 0): ?>
+
+								<div class="admin-order-item-list">
+
+									<?php while (
+										$item = $orderItemResult->fetch_assoc()
+									): ?>
+
+										<div class="admin-order-item">
+
+											<div class="admin-order-item-name">
+												<strong>
+													<?php echo htmlspecialchars(
+														$item["product_name"]
+													); ?>
+												</strong>
+
+												<span>
+													RM <?php echo number_format(
+														$item["product_price"],
+														2
+													); ?> each
+												</span>
+											</div>
+
+											<span class="admin-order-item-quantity">
+												× <?php echo (int) $item["quantity"]; ?>
+											</span>
+
+											<strong class="admin-order-item-total">
+												RM <?php echo number_format(
+													$item["line_total"],
+													2
+												); ?>
+											</strong>
+
+										</div>
+
+									<?php endwhile; ?>
+
+								</div>
+
+							<?php else: ?>
+
+								<p class="admin-no-order-items">
+									No product information was recorded for this order.
+								</p>
+
+							<?php endif; ?>
+
+						</div>
 
                     <!-- Status management -->
                     <form action="orders.php"
