@@ -43,6 +43,14 @@ if ($userId !== null) {
     }
 }
 
+// Validate subject
+    $allowedSubjects = [
+        "General Enquiry",
+        "Product Enquiry",
+        "Order Assistance",
+        "Celebration Order",
+        "Corporate Event"
+    ];
 
 // Process the contact form
 if ($_SERVER["REQUEST_METHOD"] === "POST") {
@@ -93,16 +101,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
         $errors["customer_phone"] =
             "Please enter a valid phone number.";
     }
-
-
-    // Validate subject
-    $allowedSubjects = [
-        "General Enquiry",
-        "Product Enquiry",
-        "Order Assistance",
-        "Celebration Order",
-        "Corporate Event"
-    ];
 
     if (
         !in_array(
