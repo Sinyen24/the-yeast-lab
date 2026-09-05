@@ -5696,6 +5696,29 @@ h1, h2, h3 { font-weight: 800; }
     font-size: 0.75rem;
 }
 
+.admin-order-card {
+    position: relative;
+    overflow: hidden;
+    border: 1px solid rgba(30, 30, 28, 0.2);
+    border-top: 4px solid var(--accent);
+    box-shadow: 0 5px 18px rgba(30, 30, 28, 0.06);
+}
+
+.admin-order-sequence {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    right: auto;
+    transform: translateX(-50%);
+    padding: 0.55rem 1.2rem;
+    background-color: var(--accent);
+    color: #fffdf8;
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
 @media (max-width: 1100px) {
     .admin-filter-form {
         grid-template-columns: repeat(2, 1fr);
@@ -5756,8 +5779,12 @@ h1, h2, h3 { font-weight: 800; }
     }
 	
 	.admin-order-card-heading {
-    flex-direction: column;
-    padding: 1.4rem;
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: 2rem;
+    padding: 2.2rem 2rem 1.7rem;
+    border-bottom: 1px solid rgba(30, 30, 28, 0.15);
 	}
 
 	.admin-order-total {
@@ -5839,6 +5866,36 @@ h1, h2, h3 { font-weight: 800; }
 	}
 	
 	.admin-order-remark {
-		padding: 1.2rem 1.4rem;
-	}
+    margin: 1.3rem 2rem;
+    padding: 1.1rem 1.3rem;
+    border: 1px solid rgba(30, 30, 28, 0.16);
+    border-left: 5px solid var(--accent);
+    background-color: #fcfcfa;
+		}
+
+		.admin-order-remark span {
+			display: block;
+			margin-bottom: 0.5rem;
+			color: var(--accent);
+			font-size: 0.62rem;
+			font-weight: 800;
+			letter-spacing: 0.1em;
+			text-transform: uppercase;
+		}
+
+		.admin-order-remark p {
+			margin: 0;
+			color: var(--text-main);
+			font-size: 0.78rem;
+			line-height: 1.65;
+		}
+
+		.admin-order-remark .no-customer-remark {
+			color: #81766c;
+			font-style: italic;
+		}
+}
+
+.admin-body .admin-order-card .admin-order-remark {
+    background-color: #ffffff !important;
 }
