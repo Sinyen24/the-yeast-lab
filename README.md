@@ -103,6 +103,7 @@ The_Yeast_Lab/
 
 Install WampServer and start it. Wait until the WampServer icon becomes green, indicating that Apache and MySQL are running.
 
+
 ### 2. Copy the Project Folder
 
 Copy the complete `The_Yeast_Lab` folder into:
@@ -116,6 +117,7 @@ The resulting path should be:
 ```text
 C:\wamp64\www\The_Yeast_Lab\
 ```
+
 
 ### 3. Create and Import the Database
 
@@ -134,6 +136,7 @@ C:\wamp64\www\The_Yeast_Lab\
 
 The SQL file creates the database structure and inserts the initial categories and products.
 
+
 ### 4. Check the Database Configuration
 
 The default settings in `db.php` are:
@@ -146,6 +149,7 @@ $databaseName = "yeast_lab_db";
 ```
 
 Update these values only if the local MySQL configuration is different.
+
 
 ### 5. Run the Website
 
@@ -170,30 +174,6 @@ http://localhost/The_Yeast_Lab/index.php
 
 Customer accounts can access the shopping cart, checkout, profile management, and order history.
 
-## Creating an Administrator Account
-
-For security, the project does not include a default plain-text administrator password.
-
-1. Register a new account through `register.php`, for example `admin@theyeastlab.com`.
-2. Open phpMyAdmin.
-3. Select the `yeast_lab_db` database.
-4. Open the **SQL** tab.
-5. Run the following query, replacing the email if necessary:
-
-```sql
-UPDATE users
-SET user_role = 'Admin'
-WHERE email = 'admin@theyeastlab.com';
-```
-
-6. Log out from the website if the account is currently logged in.
-7. Log in again so the new administrator role is stored in the PHP session.
-
-The administrator dashboard is available at:
-
-```text
-http://localhost/The_Yeast_Lab/admin/dashboard.php
-```
 
 ## Demo Administrator Account
 
@@ -205,6 +185,7 @@ Administrator dashboard:
 `http://localhost/The_Yeast_Lab/admin/dashboard.php`
 
 This account is provided only for local assignment demonstration purposes.
+
 
 ## Product Image Management
 
