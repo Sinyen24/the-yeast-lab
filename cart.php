@@ -257,7 +257,9 @@ foreach (
         <?php if (empty($cartItems)): ?>
             <div class="empty-cart">
                 <p>You have not ordered anything yet.</p>
-                <a href="listing.php" class="btn-contact-footer" style="background:var(--nav-bg); margin-top:20px;">Start ordering now</a>
+               <a href="listing.php" class="empty-cart-link">
+						Start ordering now →
+				</a>
             </div>
         <?php else: ?>
             <div class="cart-items">
