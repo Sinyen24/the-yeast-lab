@@ -414,6 +414,21 @@ h1, h2, h3 { font-weight: 800; }
     pointer-events: none; 
 }
 
+.empty-cart-link {
+    display: inline-block;
+    margin-top: 1rem;
+    color: var(--accent);
+    background-color: transparent;
+    font-weight: 700;
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    transition: color 0.25s ease;
+}
+
+.empty-cart-link:hover {
+    color: var(--nav-bg);
+}
+
 .cart-hover-btn {
     position: absolute;
     bottom: 0; 
@@ -5323,6 +5338,61 @@ h1, h2, h3 { font-weight: 800; }
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
     border-bottom: 1px solid rgba(30, 30, 28, 0.15);
+	.admin-ordered-products {
+    padding: 1.5rem 2rem;
+    border-bottom: 1px solid rgba(30, 30, 28, 0.15);
+    background-color: #fffdf8;
+}
+
+.admin-ordered-products h3 {
+    margin: 0 0 1rem;
+    color: var(--text-main);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.15rem;
+}
+
+.admin-order-item-list {
+    border-top: 1px solid rgba(30, 30, 28, 0.12);
+}
+
+.admin-order-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 80px 120px;
+    gap: 1rem;
+    align-items: center;
+    padding: 0.9rem 0;
+    border-bottom: 1px solid rgba(30, 30, 28, 0.12);
+}
+
+.admin-order-item-name {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.admin-order-item-name strong {
+    color: var(--text-main);
+}
+
+.admin-order-item-name span,
+.admin-order-item-quantity {
+    color: #81766c;
+    font-size: 0.75rem;
+}
+
+.admin-order-item-quantity {
+    text-align: center;
+}
+
+.admin-order-item-total {
+    color: var(--accent);
+    text-align: right;
+}
+
+.admin-no-order-items {
+    margin: 0;
+    color: #81766c;
+}
 }
 
 .admin-order-information > div {
@@ -5367,6 +5437,36 @@ h1, h2, h3 { font-weight: 800; }
 .admin-order-status-form .admin-primary-button {
     min-height: 48px;
 }
+
+.admin-order-remark {
+    padding: 1.3rem 2rem;
+    border-bottom: 1px solid rgba(30, 30, 28, 0.15);
+    background-color: #f8eddb;
+}
+
+.admin-order-remark span {
+    display: block;
+    margin-bottom: 0.55rem;
+    color: var(--accent);
+    font-size: 0.62rem;
+    font-weight: 800;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.admin-order-remark p {
+    margin: 0;
+    color: var(--text-main);
+    font-size: 0.78rem;
+    line-height: 1.65;
+}
+
+.admin-order-remark .no-customer-remark {
+    color: #81766c;
+    font-style: italic;
+}
+
+
 
 /* =====================================================
    Admin Inquiry Management
@@ -5524,6 +5624,78 @@ h1, h2, h3 { font-weight: 800; }
     padding: 0 1rem;
 }
 
+/* Ordered products inside admin order card */
+.admin-ordered-products {
+    padding: 1.6rem 2rem;
+    border-bottom: 1px solid rgba(30, 30, 28, 0.15);
+    background-color: #fffdf8;
+}
+
+.admin-ordered-products h3 {
+    margin: 0 0 1.2rem;
+    color: var(--text-main);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.admin-order-item-list {
+    overflow: hidden;
+    border: 1px solid rgba(30, 30, 28, 0.14);
+    background-color: var(--cream);
+}
+
+.admin-order-item {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 100px 130px;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 1rem 1.2rem;
+    border-bottom: 1px solid rgba(30, 30, 28, 0.12);
+}
+
+.admin-order-item:last-child {
+    border-bottom: none;
+}
+
+.admin-order-item-name {
+    display: flex;
+    min-width: 0;
+    flex-direction: column;
+    gap: 0.35rem;
+}
+
+.admin-order-item-name strong {
+    color: var(--text-main);
+    font-size: 0.82rem;
+    line-height: 1.4;
+}
+
+.admin-order-item-name span {
+    color: #81766c;
+    font-size: 0.67rem;
+}
+
+.admin-order-item-quantity {
+    color: #81766c;
+    font-size: 0.72rem;
+    font-weight: 700;
+    text-align: center;
+}
+
+.admin-order-item-total {
+    color: var(--accent);
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: 0.9rem;
+    text-align: right;
+}
+
+.admin-no-order-items {
+    margin: 0;
+    color: #81766c;
+    font-size: 0.75rem;
+}
+
 @media (max-width: 1100px) {
     .admin-filter-form {
         grid-template-columns: repeat(2, 1fr);
@@ -5645,5 +5817,28 @@ h1, h2, h3 { font-weight: 800; }
 	.admin-inquiry-actions .admin-delete-button {
 		box-sizing: border-box;
 		width: 100%;
+	}
+	
+	.admin-ordered-products {
+    padding: 1.3rem 1.4rem;
+	}
+
+	.admin-order-item {
+		grid-template-columns: minmax(0, 1fr) auto;
+		gap: 0.6rem 1rem;
+		padding: 1rem;
+	}
+
+	.admin-order-item-quantity {
+		text-align: right;
+	}
+
+	.admin-order-item-total {
+		grid-column: 1 / -1;
+		text-align: left;
+	}
+	
+	.admin-order-remark {
+		padding: 1.2rem 1.4rem;
 	}
 }
