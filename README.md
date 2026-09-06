@@ -103,7 +103,6 @@ The_Yeast_Lab/
 
 Install WampServer and start it. Wait until the WampServer icon becomes green, indicating that Apache and MySQL are running.
 
-
 ### 2. Copy the Project Folder
 
 Copy the complete `The_Yeast_Lab` folder into:
@@ -117,7 +116,6 @@ The resulting path should be:
 ```text
 C:\wamp64\www\The_Yeast_Lab\
 ```
-
 
 ### 3. Create and Import the Database
 
@@ -136,7 +134,6 @@ C:\wamp64\www\The_Yeast_Lab\
 
 The SQL file creates the database structure and inserts the initial categories and products.
 
-
 ### 4. Check the Database Configuration
 
 The default settings in `db.php` are:
@@ -149,7 +146,6 @@ $databaseName = "yeast_lab_db";
 ```
 
 Update these values only if the local MySQL configuration is different.
-
 
 ### 5. Run the Website
 
@@ -187,6 +183,28 @@ Administrator dashboard:
 This account is provided only for local assignment demonstration purposes.
 
 
+## Creating an Additional Administrator Account
+A demonstration administrator account is already included. To create an additional administrator account:
+
+1. Register a new customer account through `register.php`.
+2. Open phpMyAdmin.
+3. Select the `yeast_lab_db` database.
+4. Open the **SQL** tab.
+5. Run the following query, replacing the email address with the registered account:
+```sql
+UPDATE users
+SET user_role = 'Admin'
+WHERE email = 'your-email@example.com';
+```
+6. Log out if the account is currently signed in.
+7. Log in again to refresh the user role stored in the PHP session.
+The administrator dashboard is available at:
+
+```text
+http://localhost/The_Yeast_Lab/admin/dashboard.php
+```
+
+
 ## Product Image Management
 
 Product image files are stored in the `includes` folder. When adding or editing a product in the administrator area, enter the exact image filename, including its extension.
@@ -222,6 +240,14 @@ Perform the following test after installation:
 13. Update an order and payment status.
 14. Update and delete a temporary inquiry.
 15. Test the layout on desktop, tablet, and mobile screen sizes.
+
+## Video Demonstration
+
+A recorded demonstration of The Yeast Lab is available through the Google Drive link below. The video presents the customer and administrator features, responsive interface, JavaScript interactions, PHP processing, MySQL database integration, CRUD operations, authentication and session management.
+
+[Watch The Yeast Lab Video Demonstration] https://utarict-my.sharepoint.com/:v:/r/personal/sinyen24_1utar_my/Documents/UECS2194_Presentation_P6_G4.mp4?d=wd4d678dbc4d74a5da58a4e17ce8b3558&csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=0lgRHx
+
+The video is submitted as part of the UECS2194 Web Application Development group assignment.
 
 ## Security and Validation
 
@@ -266,9 +292,14 @@ This project was developed specifically for the Web Application Development grou
 
 All externally sourced text, photographs, icons, design references, and other borrowed content must be acknowledged in the project report using Harvard referencing. The project source code must remain original and must not include prohibited frameworks or templates.
 
-## Authors and Workload
+## Authors
 
-Add the names, student IDs, practical class, group number, and contribution of every group member to the project report and final submission documentation.
+- Chew Sin Yen — 2305593
+- Ong Huai Zhou — 2303180
+- Hue Wei Sheng — 2305332
+
+Practical Group: P6  
+Assignment Group: G4
 
 ## Licence
 
