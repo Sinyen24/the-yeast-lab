@@ -4,6 +4,90 @@ The Yeast Lab is a responsive, database-driven pastry bakery web application dev
 
 The project allows customers to explore bakery products, create an account, manage a shopping cart, place pickup or delivery orders, view previous orders, update their profile, and submit inquiries. Administrators can manage products, orders, and customer inquiries.
 
+## Project Preview
+
+### Homepage
+
+![The Yeast Lab homepage](screenshots/homescreen%20%281%29.png)
+
+<details>
+<summary><strong>View the complete homepage</strong></summary>
+
+<br>
+
+<img src="screenshots/homescreen%20%282%29.png" alt="Homepage categories" width="49%">
+<img src="screenshots/homescreen%20%283%29.png" alt="Homepage product section" width="49%">
+<img src="screenshots/homescreen%20%284%29.png" alt="Homepage featured products" width="49%">
+<img src="screenshots/homescreen%20%285%29.png" alt="Homepage bakery content" width="49%">
+<img src="screenshots/homescreen%20%286%29.png" alt="Homepage information section" width="49%">
+<img src="screenshots/homescreen%20%287%29.png" alt="Homepage additional content" width="49%">
+<img src="screenshots/homescreen%20%288%29.png" alt="Homepage footer" width="49%">
+
+</details>
+
+### Product Catalogue
+
+The product catalogue supports category filtering, keyword search, sorting and database-driven product cards.
+
+<details>
+<summary><strong>View the product catalogue</strong></summary>
+
+<br>
+
+<img src="screenshots/product_listing_page%20%20%281%29.png" alt="Product listing filters" width="49%">
+<img src="screenshots/product_listing_page%20%20%282%29.png" alt="Product listing cards" width="49%">
+<img src="screenshots/product_listing_page%20%20%283%29.png" alt="Additional products" width="49%">
+<img src="screenshots/product_listing_page%20%20%284%29.png" alt="Product listing footer" width="49%">
+
+</details>
+
+### Product Details
+
+<details>
+<summary><strong>View the product details page</strong></summary>
+
+<br>
+
+<img src="screenshots/product_detail_page%20%281%29.png" alt="Product information and quantity selector" width="49%">
+<img src="screenshots/product_detail_page%20%282%29.png" alt="Additional product details" width="49%">
+
+</details>
+
+### Cart and Checkout
+
+![Customer cart and checkout interface](screenshots/cart-checkout.png)
+
+### Administrator Product Management
+
+The protected administrator area provides product creation, editing, availability management and deletion controls.
+
+<details>
+<summary><strong>View administrator product management</strong></summary>
+
+<br>
+
+<img src="screenshots/admin-products%20%281%29.png" alt="Administrator product list" width="49%">
+<img src="screenshots/admin-products%20%282%29.png" alt="Administrator product controls" width="49%">
+<img src="screenshots/admin-products%20%283%29.png" alt="Administrator product form" width="49%">
+
+</details>
+
+### Administrator Order Management
+
+<details>
+<summary><strong>View administrator order management</strong></summary>
+
+<br>
+
+<img src="screenshots/admin-orders%20%281%29.png" alt="Administrator order list" width="49%">
+<img src="screenshots/admin-orders%20%282%29.png" alt="Order products, remarks and status controls" width="49%">
+
+</details>
+
+### Contact and Inquiry Management
+
+![Contact form and inquiry-management interface](screenshots/contact_inquiries.png)
+
 ## Technologies Used
 
 - HTML5
@@ -245,7 +329,7 @@ Perform the following test after installation:
 
 A recorded demonstration of The Yeast Lab is available through the Google Drive link below. The video presents the customer and administrator features, responsive interface, JavaScript interactions, PHP processing, MySQL database integration, CRUD operations, authentication and session management.
 
-[Watch The Yeast Lab Video Demonstration] https://utarict-my.sharepoint.com/:v:/r/personal/sinyen24_1utar_my/Documents/UECS2194_Presentation_P6_G4.mp4?d=wd4d678dbc4d74a5da58a4e17ce8b3558&csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=0lgRHx
+[Watch The Yeast Lab Video Demonstration](https://utarict-my.sharepoint.com/:v:/r/personal/sinyen24_1utar_my/Documents/UECS2194_Presentation_P6_G4.mp4?d=wd4d678dbc4d74a5da58a4e17ce8b3558&csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=0lgRHx)
 
 The video is submitted as part of the UECS2194 Web Application Development group assignment.
 
