@@ -79,8 +79,8 @@ The protected administrator area provides product creation, editing, availabilit
 
 <br>
 
-<img src="screenshots/admin-orders%20%281%29.png" alt="Administrator order list" width="49%">
-<img src="screenshots/admin-orders%20%282%29.png" alt="Order products, remarks and status controls" width="49%">
+<img src="screenshots/admin_orders%20%281%29.png" alt="Administrator order list" width="49%">
+<img src="screenshots/admin_orders%20%282%29.png" alt="Order products, remarks and status controls" width="49%">
 
 </details>
 
