@@ -325,14 +325,6 @@ Perform the following test after installation:
 14. Update and delete a temporary inquiry.
 15. Test the layout on desktop, tablet, and mobile screen sizes.
 
-## Video Demonstration
-
-A recorded demonstration of The Yeast Lab is available through the Google Drive link below. The video presents the customer and administrator features, responsive interface, JavaScript interactions, PHP processing, MySQL database integration, CRUD operations, authentication and session management.
-
-[Watch The Yeast Lab Video Demonstration](https://utarict-my.sharepoint.com/:v:/r/personal/sinyen24_1utar_my/Documents/UECS2194_Presentation_P6_G4.mp4?d=wd4d678dbc4d74a5da58a4e17ce8b3558&csf=1&web=1&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=0lgRHx)
-
-The video is submitted as part of the UECS2194 Web Application Development group assignment.
-
 ## Security and Validation
 
 The project implements:
@@ -376,14 +368,6 @@ This project was developed specifically for the Web Application Development grou
 
 All externally sourced text, photographs, icons, design references, and other borrowed content must be acknowledged in the project report using Harvard referencing. The project source code must remain original and must not include prohibited frameworks or templates.
 
-## Authors
-
-- Chew Sin Yen — 2305593
-- Ong Huai Zhou — 2303180
-- Hue Wei Sheng — 2305332
-
-Practical Group: P6  
-Assignment Group: G4
 
 ## Licence
 
